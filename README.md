@@ -25,4 +25,4 @@ az ad sp create-for-rbac --name "GitHub-Actions-SP" \
 ```
 
 ### Configure a federated identity credential on an app
-
+https://learn.microsoft.com/en-us/graph/api/resources/federatedidentitycredentials-overview?view=graph-rest-1.0
