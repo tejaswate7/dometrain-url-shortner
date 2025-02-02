@@ -11,6 +11,10 @@ on:
         - infrastructure/**
   workflow_dispatch: # manually trigger a workflow
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
  deploy-dev:
     runs-on: ubuntu-latest
