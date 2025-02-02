@@ -46,7 +46,6 @@ jobs:
             template: infrastructure/main.bicep
  deploy-stg:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment: Staging
     needs: deploy-dev
     steps:
@@ -74,6 +73,7 @@ jobs:
             template: infrastructure/main.bicep
  deploy-prod:
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment: Production
     needs: deploy-stg
     steps:
